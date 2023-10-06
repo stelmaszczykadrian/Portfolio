@@ -6,6 +6,9 @@ import Skills from "./components/skills/Skills";
 import Contact from "./components/contact/Contact";
 import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from "./components/footer/Footer";
+import ScrollUp from "./components/scrollup/ScrollUp";
+import Work from "./components/Work/Work";
 
 function App() {
   return (
@@ -15,8 +18,11 @@ function App() {
             <Home/>
             <About/>
             <Skills/>
+            <Work/>
             <ToastContainer/>
             <Contact/>
+            <Footer/>
+            <ScrollUp/>
         </main>
     </>
   );
