@@ -10,6 +10,14 @@
     justify-self: center;
 }
 
+/*.about__data {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center; !* Centrowanie w pionie *!*/
+/*    justify-content: center; !* Centrowanie w poziomie *!*/
+/*    text-align: center;*/
+/*}*/
+
 .about__info {
     grid-template-columns: repeat(3, 140px);
     gap: 0.5rem;
@@ -26,11 +34,12 @@
 
 .about__icon {
     font-size: 1.5rem;
-    color: var(--title-color);
     margin-bottom: var(--mb-0-5);
+    color: var(--golden-color);
 }
 
 .about__title {
+    color: var(--title-color);
     font-size: var(--small-font-size);
     font-weight: var(--font-medium);
 }
@@ -40,8 +49,22 @@
 }
 
 .about__description {
+    text-align: center;
+    color: var(--title-color);
     padding: 0 4rem 0 0;
+    margin-top: var(--mb-1-5);
     margin-bottom: var(--mb-2-5);
+}
+
+.about__button-download {
+    color: black;
+    background-color: #FFD700;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.about__button-download-section {
+    text-align: center;
 }
 
 /* BREAKPOINTS */
