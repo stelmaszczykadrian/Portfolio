@@ -15,8 +15,6 @@
     animation: profile__animate 8s ease-in-out infinite 1s;
 }
 
-
-
 .home__social {
     display: grid;
     grid-template-columns: max-content;
@@ -24,41 +22,50 @@
 }
 
 .home__social-icon {
-    font-size: 1.25rem;
+    font-size: 3rem;
     color: var(--title-color)
 }
 
 .home__social-icon:hover {
-    color: var(--title-color-dark);
+    color: var(--golden-color);
 }
 
 .home__title {
     font-size: var(--big-font-size);
     margin-bottom: var(--mb-0-25);
+    color: var(--golden-color);
 }
 
 .home__subtitle {
+    color: navajowhite;
     position: relative;
     font-size: var(--h3-font-size);
-    padding-left: 5.4rem;
     font-weight: var(--font-normal);
     margin-bottom: var(--mb-1);
 }
 
-.home__subtitle::before {
-    content: '';
-    position: absolute;
-    width: 70px;
-    height: 1px;
-    background-color: var(--text-color);
-    left: 0;
-    top: 1rem;
+.home__buttons-section {
+    display: flex;
+    gap: 20px;
+}
+
+.home__buttons-icon {
+    font-size: 20px;
+    margin-left: 7px;
 }
 
 
 .home__description {
     max-width: 400px;
     margin-bottom: var(--mb-3);
+    color: var(--title-color);
+}
+
+.home__button-sayhello {
+    color: black;
+    background-color: var(--golden-color);
+    transition: 0.5s;
+    font-weight: bold;
 }
 
 @keyframes profile__animate {
@@ -87,10 +94,10 @@
         margin-bottom: var(--mb-1);
     }
 
-    .home__subtitle::before {
-        width: 42px;
-        top: 0.8rem;
-    }
+    /*.home__subtitle::before {*/
+    /*    width: 42px;*/
+    /*    top: 0.8rem;*/
+    /*}*/
 
     .home__description {
         max-width: initial;

@@ -1,6 +1,6 @@
 import './Home.css';
-import Social from "./Social";
 import Data from "./Data";
+import SocialIcon from "./SocialIcon";
 
 export default function Home() {
 
@@ -8,8 +8,12 @@ export default function Home() {
         <section className="home section" id="home">
             <div className="home__container container grid">
                 <div className="home__content grid">
-                    <Social/>
-                    <div className="home__img"></div>
+                    <div className="home__social">
+                        <SocialIcon href={"https://linkedin.com/in/stelmaszczykadrian"} iconClass={"bx bxl-linkedin"}/>
+                        <SocialIcon href={"https://github.com/stelmaszczykadrian"} iconClass={"bx bxl-github"}/>
+                        <SocialIcon href="mailto:stelmaszczykadrian@gmail.com" iconClass="uil uil-envelope"/>
+                    </div>
+                    <div className="home__img"/>
                     <Data/>
                 </div>
             </div>
