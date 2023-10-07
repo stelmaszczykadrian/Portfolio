@@ -9,11 +9,12 @@
     /*Color mode HSL(hue, saturation, lightness)*/
     --hue: 0;
     --sat: 0%;
-    --title-color: hsl(var(--hue), var(--sat), 20%);
-    --title-color-dark: hsl(var(--hue), var(--sat), 0%);
+    --title-color: white;
+    --title-color-dark: whitesmoke;
     --text-color: hsl(var(--hue), var(--sat), 46%);
-    --body-color: hsl(var(--hue), var(--sat), 98%);
-    --container-color: #fff;
+    --body-color: rgb(30, 30, 30);
+    --golden-color: #FFD700;
+    --container-color: hsl(var(--hue), var(--sat), 20%);
 
     /*Font and typography*/
     --body-font: "Poppins", sans-serif;
@@ -88,7 +89,6 @@ body {
 }
 
 
-
 h1, h2, h3 {
     color: var(--title-color);
     font-weight: var(--font-semi-bold);
@@ -120,7 +120,7 @@ img {
 
 .section__title {
     font-size: var(--h1-font-size);
-    color: var(--title-color)
+    color: var(--golden-color)
 
 }
 
@@ -128,6 +128,7 @@ img {
     display: block;
     font-size: var(--small-font-size);
     margin-bottom: 4rem;
+    color: var(--title-color);
 }
 
 .section__title,
@@ -148,6 +149,11 @@ img {
     gap: 1.5rem
 }
 
+.flex {
+    display: flex;
+    gap: 1.5rem
+}
+
 /* BUTTONS */
 
 .button {
@@ -162,10 +168,6 @@ img {
 .button:hover {
     background-color: var(--title-color-dark);
 }
-
-/*.button__icon {*/
-/*    margin-left: var(--mb-0-5);*/
-/*}*/
 
 .button--flex {
     display: inline-flex;
