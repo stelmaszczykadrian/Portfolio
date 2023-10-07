@@ -9,6 +9,8 @@
     border: 1px solid rgba(0,0,0, 0.1);
     padding: 1.25rem;
     border-radius: 1rem;
+    text-align: center;
+    align-items: center;
 }
 
 .work__img {
@@ -24,11 +26,10 @@
 }
 
 .work__button {
-    color: var(--text-color);
     font-size: var(--small-font-size);
-    display: flex;
     align-items: center;
     column-gap: 0.25rem;
+    color: var(--golden-color);
 }
 
 .work__button-icon {
