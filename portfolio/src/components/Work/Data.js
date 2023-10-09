@@ -3,6 +3,8 @@ import JobFever from '../../assets/workimages/JobFever.jpg';
 import DungeonAdventures from '../../assets/workimages/DungeonAdventures.jpg';
 import KampShop from '../../assets/workimages/KampShop.jpg';
 
+export const workSectionTitle = 'Projects';
+export const workSectionSubtitle = 'Most recent works';
 export const projectsData = [
     {
         id: 1,
