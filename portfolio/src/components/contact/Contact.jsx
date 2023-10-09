@@ -7,6 +7,7 @@ import ContactCard from "./ContactCard";
 import InputField from "./InputField";
 import TextAreaField from "./TextAreaField";
 import SubmitButton from "./SubmitButton";
+import {data, contactSectionSubtitle, contactSectionTitle} from "./Data";
 
 export default function Contact() {
     const form = useRef();
@@ -24,33 +25,27 @@ export default function Contact() {
                 toast.error("Something went wrong.")
             });
     };
-
     return (
         <section className="contact section" id="contact">
-            <h2 className="section__title">Get in touch</h2>
-            <span className="section__subtitle">Contact me</span>
+            <h2 className="section__title">
+                {contactSectionTitle}
+            </h2>
+            <span className="section__subtitle">
+                {contactSectionSubtitle}
+            </span>
             <div className="contact__container container grid">
                 <div className="contact__content">
                     <h3 className="contact__title">Check me at</h3>
                     <div className="contact__info">
-                        <ContactCard
-                            iconClassName="bx bxl-linkedin contact__card-icon"
-                            title="LinkedIn"
-                            link="https://linkedin.com/in/stelmaszczykadrian"
-                            buttonText="LinkedIn profile"
-                        />
-                        <ContactCard
-                            iconClassName="bx bxl-github contact__card-icon"
-                            title="GitHub"
-                            link="https://github.com/stelmaszczykadrian"
-                            buttonText="GitHub profile"
-                        />
-                        <ContactCard
-                            iconClassName="bx bx-mail-send contact__card-icon"
-                            title="Email"
-                            link="mailto:stelmaszczykadrian@gmail.com"
-                            buttonText="Write me"
-                        />
+                        {data.map((contact, index) => (
+                            <ContactCard
+                                key={index}
+                                iconClassName={contact.iconClassName}
+                                title={contact.title}
+                                link={contact.link}
+                                buttonText={contact.buttonText}
+                            />
+                        ))}
                     </div>
                 </div>
                 <div className="contact__content">
