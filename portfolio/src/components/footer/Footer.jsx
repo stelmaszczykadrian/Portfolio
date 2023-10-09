@@ -1,23 +1,27 @@
 import './Footer.css';
 import {FooterLink} from "./FooterLink";
 import SocialIcon from "../home/SocialIcon";
+import logo from "../../assets/logo/StelmaszczykDev-logo.png";
+import {footerLinks, socialIcons} from "./Data";
 
 export default function Footer() {
-
+    const logoWidth = "205px";
+    const logoHeight = "215px";
     return (
         <footer className="footer">
             <div className="footer__container container">
-                <h1 className="footer__title">Stelmaszczyk</h1>
+                <div className="footer__logo-container">
+                    <img src={logo} width={logoWidth} height={logoHeight} alt="Stelmaszczyk Dev logo" />
+                </div>
                 <ul className="footer__list">
-                    <FooterLink href="#about" text="About"/>
-                    <FooterLink href="#skills" text="Skills"/>
-                    <FooterLink href="#works" text="Projects"/>
-                    <FooterLink href="#contact" text="Contact"/>
+                    {footerLinks.map((link, index) => (
+                        <FooterLink key={index} href={link.href} text={link.text} />
+                    ))}
                 </ul>
                 <div className="footer__social">
-                    <SocialIcon href={"https://linkedin.com/in/stelmaszczykadrian"} iconClass={"bx bxl-linkedin"}/>
-                    <SocialIcon href={"https://github.com/stelmaszczykadrian"} iconClass={"bx bxl-github"}/>
-                    <SocialIcon href="mailto:stelmaszczykadrian@gmail.com" iconClass="uil uil-envelope"/>
+                    {socialIcons.map((icon, index) => (
+                        <SocialIcon key={index} href={icon.href} iconClass={icon.iconClass} />
+                    ))}
                 </div>
             </div>
         </footer>
