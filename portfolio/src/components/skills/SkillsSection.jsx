@@ -1,12 +1,13 @@
 import Skill from "./Skill";
-import { frontendSkills} from "./Data";
 import {groupSize, splitSkillsIntoGroups} from "../../util/util";
 
-export default function Frontend() {
-    const groupedSkills = splitSkillsIntoGroups(frontendSkills, groupSize);
+export default function SkillsSection({skillList, sectionTitle}) {
+    const groupedSkills = splitSkillsIntoGroups(skillList, groupSize);
     return (
         <div className="skills__content">
-            <h3 className="skills__title">Frontend Developer</h3>
+            <h3 className="skills__title">
+                {sectionTitle}
+            </h3>
             <div className="skills__box">
                 {groupedSkills.map((group, groupIndex) => (
                     <div key={groupIndex} className="skills__group">

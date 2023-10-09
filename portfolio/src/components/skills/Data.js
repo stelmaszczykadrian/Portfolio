@@ -1,3 +1,8 @@
+export const frontendTitle = 'Frontend Developer';
+export const backendTitle = 'Backend Developer';
+export const skillsSectionTitle = 'Skills';
+export const skillsSectionSubtitle = 'My technical level';
+
 export const backendSkills = [
     { name: "Java" },
     { name: "Spring Boot" },
