@@ -1,20 +1,20 @@
 import './Home.css';
-import Data from "./Data";
+import PersonalInfo from "./PersonalInfo";
 import SocialIcon from "./SocialIcon";
+import {data} from "./Data";
 
 export default function Home() {
-
     return (
         <section className="home section" id="home">
             <div className="home__container container grid">
                 <div className="home__content grid">
                     <div className="home__social">
-                        <SocialIcon href={"https://linkedin.com/in/stelmaszczykadrian"} iconClass={"bx bxl-linkedin"}/>
-                        <SocialIcon href={"https://github.com/stelmaszczykadrian"} iconClass={"bx bxl-github"}/>
-                        <SocialIcon href="mailto:stelmaszczykadrian@gmail.com" iconClass="uil uil-envelope"/>
+                        {data.map((item, index) => (
+                            <SocialIcon key={index} href={item.href} iconClass={item.iconClass}/>
+                        ))}
                     </div>
                     <div className="home__img"/>
-                    <Data/>
+                    <PersonalInfo/>
                 </div>
             </div>
         </section>
