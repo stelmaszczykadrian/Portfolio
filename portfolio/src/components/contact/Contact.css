@@ -31,7 +31,7 @@
     padding: 1rem;
     border-radius: 0.75rem;
     text-align: center;
-    transition: 2s;
+    /*transition: 2s;*/
 }
 
 .contact__card-icon {
@@ -66,6 +66,7 @@
     background-color: #FFD700;
     transition: 0.5s;
     font-weight: bold;
+    margin-top: 8rem;
 }
 
 .contact__button-icon {
@@ -100,15 +101,15 @@
     background: none;
     outline: none;
     border: 2px solid var(--title-color);
-    color: var(--text-color);
+    color: var(--title-color);
     border-radius: 0.75rem;
     padding: 1.5rem;
     z-index: 1;
 }
 
-.contact__form-input::placeholder {
-    color: var(--title-color);
-}
+/*.contact__form-input::placeholder {*/
+/*    color: var(--title-color);*/
+/*}*/
 
 .contact__form-tag {
     position: absolute;
@@ -129,6 +130,21 @@
     resize: none;
 }
 
+.error-message {
+    color: red; /* Ustaw kolor na czerwony */
+}
+
+/*.custom-textarea {*/
+/*    width: 360px;*/
+/*    height: 200px;*/
+/*}*/
+
+.custom-textarea {
+    width: 100%; /* Szerokość dostosowana do kontenera */
+    height: 200px;
+    margin-bottom: 5rem; /* Dodaj margines na dole */
+}
+
 /* BREAKPOINTS */
 /* For large devices */
 @media screen and (max-width: 992px) {
@@ -143,26 +159,37 @@
         row-gap: 3rem;
     }
 
-    .contact__info {
-        justify-content: center;
-    }
+    /*.contact__info {*/
+    /*    justify-content: center;*/
+    /*}*/
 
-    .contact__form {
-        margin: 0 auto;
-    }
+    /*.contact__form {*/
+    /*    margin: 0 auto;*/
+    /*}*/
 }
 
 @media screen and (max-width: 576px) {
-    .contact__info {
-        grid-template-columns: 1fr;
-    }
+    /*.contact__info {*/
+    /*    grid-template-columns: 1fr;*/
+    /*}*/
 
-    .contact__form {
-        width: 100%;
-    }
+    /*.contact__form {*/
+    /*    margin-left: 3rem;*/
+    /*    margin-right: 3rem;*/
+    /*}*/
 }
 
 /* For small devices*/
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 360px) {
+    .contact__form-div {
+        margin-left: 1rem;
+        width: 90%;
+    }
+}
 
+@media screen and (max-width: 330px) {
+    .contact__form-div {
+        margin-left: 3rem;
+        width: 80%;
+    }
 }
