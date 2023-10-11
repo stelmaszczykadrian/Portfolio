@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Footer from "./components/footer/Footer";
 import ScrollUp from "./components/scrollup/ScrollUp";
 import Work from "./components/Work/Work";
+import Services from "./components/services/Services";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <main className="main">
             <Home/>
             <About/>
+            <Services/>
             <Skills/>
             <Work/>
             <ToastContainer/>
