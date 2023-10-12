@@ -2,11 +2,11 @@ import React, {useRef} from 'react';
 import emailjs from '@emailjs/browser';
 import "./Contact.css";
 import {toast} from "react-toastify";
-import config from "../../env";
 import * as Yup from 'yup';
 import ContactCard from "./ContactCard";
 import {data, contactSectionSubtitle, contactSectionTitle} from "./Data";
 import {Formik, ErrorMessage, Field, Form} from "formik";
+import {config} from "../../env";
 
 
 export default function Contact() {
